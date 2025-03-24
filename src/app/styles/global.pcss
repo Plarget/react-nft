@@ -11,12 +11,12 @@ body {
 
 html {
     --scale-factor: 1;
-    scale: var(--scale-factor);
-    transform-origin: top;
 
     @media (min-width: 1921px) {
         display: flex;
         justify-content: center;
+        zoom: var(--scale-factor);
+        transform-origin: top;
 
         & body {
             max-width: 1920px;
