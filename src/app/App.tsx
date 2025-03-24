@@ -9,7 +9,7 @@ const App = () => {
   useEffect(() => {
     function updateScaleFactor() {
       let scaleFactor = Math.max(1.0, window.innerWidth / 1920);
-      console.log(window.innerWidth, window.innerWidth / 1920)
+
       document.documentElement.style.setProperty("--scale-factor", `${scaleFactor}`);
     }
 
