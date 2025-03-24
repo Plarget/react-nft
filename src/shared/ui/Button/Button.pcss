@@ -1,0 +1,81 @@
+@import "@/shared/styles/mixins.pcss";
+@import "@/shared/styles/media.pcss";
+
+.button {
+    @mixin flex-center;
+    font-family: "Poppins", sans-serif;
+    color: var(--color-main-2);
+    font-size: 16px;
+    font-weight: 500;
+    height: 60px;
+    background-color: var(--color-main);
+    border-radius: 12px;
+    white-space: nowrap;
+    user-select: none;
+    cursor: pointer;
+    padding-inline: 30px;
+    text-transform: uppercase;
+    transition: 0.25s background-color;
+
+    @media (--desktop-xs) {
+        font-size: 12px;
+        height: 46px;
+        padding-inline: 20px;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: var(--color-main-light);
+        }
+    }
+
+    &.is-transparent {
+        color: var(--color-main);
+        background-color: transparent;
+        border: 1.5px var(--color-main) solid;
+
+        @media (hover: hover) {
+            &:hover {
+                background-color: var(--color-main-3-very-light);
+            }
+        }
+    }
+
+    &.is-small {
+        padding-inline: 20px;
+    }
+
+    &.is-bold {
+        font-weight: 600;
+    }
+
+    &.is-main-2 {
+        font-family: "Outfit", sans-serif;
+        font-weight: 600;
+        color: var(--color-main);
+        background-color: var(--color-main-2);
+        text-transform: initial;
+
+        @media (hover: hover) {
+            &:hover {
+                background-color: var(--color-main-2-dark);
+            }
+        }
+    }
+
+    &.is-transparent-main-2 {
+        font-family: "Outfit", sans-serif;
+        font-weight: 600;
+        color: var(--color-main-2);
+        background-color: transparent;
+        border: 2px solid var(--color-main-2);
+        text-transform: initial;
+
+        @media (hover: hover) {
+            &:hover {
+                color: var(--color-main);
+                background-color: var(--color-main-3-light);
+            }
+        }
+    }
+}

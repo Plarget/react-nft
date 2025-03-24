@@ -1,0 +1,58 @@
+@import "@/shared/styles/mixins.pcss";
+@import "@/shared/styles/media.pcss";
+
+.header-burger-button {
+    --header-button-line: 2px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 32px;
+    height: 22px;
+    border-radius: 4px;
+    background-color: var(--color-main-2);
+
+    color: var(--color-main);
+    font-size: 0;
+
+
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        width: 32px;
+        height: var(--header-button-line);
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        background: currentColor;
+
+        transform: translate(-50%, -50%);
+        transition: transform 0.25s ease-in-out;
+    }
+
+    &.is-active {
+        &:before {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &:after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+
+    &__center {
+        width: 32px;
+        height: 20px;
+        border-top: var(--header-button-line) solid;
+        border-bottom: var(--header-button-line) solid;
+        transition: all 0.15s ease-in-out;
+    }
+
+    &.is-active &__center {
+        border-color: transparent;
+    }
+}

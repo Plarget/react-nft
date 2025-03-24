@@ -1,0 +1,114 @@
+@import "@/shared/styles/mixins.pcss";
+@import "@/shared/styles/media.pcss";
+
+.top-nft {
+    padding-top: 70px;
+    padding-bottom: 87px;
+    background-color: var(--color-main-2-very-dark);
+
+    @media (--tablet-s) {
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
+    
+    @media (--mobile) {
+        padding-top: 56px;
+        padding-bottom: 55px;
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__lot {
+        box-sizing: border-box;
+    }
+
+    &__slider {
+        padding-top: 100px;
+        padding-bottom: 114px;
+
+        @media (--tablet-s) {
+            padding-top: 70px;
+            padding-bottom: 80px;
+        }
+
+        @media (--mobile) {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+    }
+
+    &__slide {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+        height: 68px;
+        border-radius: 18px;
+        background-color: var(--color-main-2-dark);
+        overflow: clip;
+        width: 166px;
+        box-shadow: 0 30px 24px -18px #0F0F0F1F;
+
+        @media (--tablet-s) {
+            height: 49px;
+            width: 118px;
+            border-radius: 12px;
+        }
+
+        @media (--mobile) {
+            width: 102px;
+            height: 42px;
+            border-radius: 10px;
+        }
+
+        &-icon {
+            --navigation-icon-size: 26px;
+            width: var(--navigation-icon-size);
+            height: var(--navigation-icon-size);
+            transform: translateX(25%);
+
+            @media (--tablet-s) {
+                --navigation-icon-size: 18px;
+            }
+
+            @media (--mobile) {
+                --navigation-icon-size: 16px;
+            }
+
+            &.is-prev {
+                transform: translateX(25%);
+                rotate: 180deg;
+            }
+        }
+
+        &-button {
+            @mixin flex-center;
+            flex-grow: 1;
+            height: 100%;
+        }
+
+        &-line {
+            width: 2px;
+            height: 25px;
+            background-color: #E6E8EC;
+
+            @media (--tablet-s) {
+                height: 18px;
+            }
+
+            @media (--mobile) {
+                height: 16px;
+            }
+        }
+    }
+}

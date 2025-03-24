@@ -1,0 +1,49 @@
+@import "@/shared/styles/mixins.pcss";
+@import "@/shared/styles/media.pcss";
+
+.footer-contacts {
+    &__list {
+        display: flex;
+        column-gap: 38px;
+        align-items: center;
+
+        @media (--mobile) {
+            column-gap: 20px;
+        }
+    }
+
+    &__item {
+        display: inline-flex;
+    }
+
+
+    &__icon {
+        display: inline-flex;
+    }
+
+    &__link {
+        @mixin flex-center;
+        --contacts-link-size: 24px;
+        width: var(--contacts-link-size);
+        height: var(--contacts-link-size);
+
+        @media (--mobile) {
+            --contacts-link-size: 16px;
+        }
+
+        & svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        & path {
+            fill: var(--color-main-3);
+        }
+
+        @media (hover: hover) {
+            &:hover path {
+                fill: var(--color-main-2);
+            }
+        }
+    }
+}

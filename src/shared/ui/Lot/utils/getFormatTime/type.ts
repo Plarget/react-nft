@@ -1,0 +1,1 @@
+export type TGetFormatTime = (seconds: number) => string;

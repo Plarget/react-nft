@@ -1,0 +1,69 @@
+@import "@/shared/styles/mixins.pcss";
+@import "@/shared/styles/media.pcss";
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-block: 15px;
+    background-color: var(--color-main-2-dark);
+    border-radius: 0 0 20px 20px;
+    z-index: 8;
+    transition: 0.25s background-color, padding;
+
+    @media (min-width: 1921px) {
+        max-width: 1920px;
+    }
+
+    @media (--mobile) {
+        padding-block: 30px;
+
+        &:after {
+            content: "";
+            position: absolute;
+            left: var(--container-padding);
+            bottom: 0;
+            width: calc(100% - var(--container-padding) * 2);
+            height: 0.5px;
+            background-color: var(--color-main-3-more-light);
+        }
+    }
+
+    &.is-scrolled {
+        background-color: var(--color-main-2);
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+    }
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+        margin-right: auto;
+
+        &-logo {
+            margin-right: 57px;
+
+            @media (--tablet-s) {
+                margin-right: 40px;
+            }
+        }
+
+        &-list {
+            display: flex;
+            column-gap: 53px;
+
+            @media (--tablet-s) {
+                column-gap: 38px;
+            }
+        }
+    }
+
+    &__button {
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        border-radius: 16px;
+    }
+}

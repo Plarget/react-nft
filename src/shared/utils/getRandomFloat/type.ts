@@ -1,0 +1,1 @@
+export type TGetRandomFloat = (min: number, max: number) => number;

@@ -1,0 +1,68 @@
+@import "@/shared/styles/mixins.pcss";
+@import "@/shared/styles/media.pcss";
+
+.header-mobile-menu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    background-color: var(--color-main-2-dark);
+    padding-top: calc(113px + 44px);
+    padding-left: 28px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+    overflow-y: auto;
+
+    &__navigation {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+        margin-bottom: 44px;
+    }
+
+    &__contacts {
+        margin-bottom: auto;
+
+        &-list {
+            display: flex;
+            column-gap: 35px;
+            align-items: center;
+        }
+
+        &-item {
+            display: inline-flex;
+        }
+
+
+        &-icon {
+            display: inline-flex;
+        }
+
+        &-link {
+            @mixin flex-center;
+            --contacts-link-size: 32px;
+            width: var(--contacts-link-size);
+            height: var(--contacts-link-size);
+
+
+            & svg {
+                width: 100%;
+                height: 100%;
+            }
+
+            & path {
+                fill: var(--color-main-3);
+            }
+        }
+    }
+
+    &__button {
+        flex-shrink: 0;
+        width: 100%;
+    }
+}

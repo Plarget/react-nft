@@ -1,0 +1,30 @@
+@import "@/shared/styles/mixins.pcss";
+@import "@/shared/styles/media.pcss";
+
+.logo {
+    &__icon {
+        --logo-size: 53px;
+        width: var(--logo-size);
+        height: var(--logo-size);
+    }
+
+    &__inner {
+        display: inline-flex;
+        column-gap: 7px;
+        align-items: center;
+    }
+
+    &.is-header &__text {
+        @media (--mobile-above) {
+            display: none;
+        }
+    }
+
+    &.is-white &__text{
+        color: var(--color-main-2);
+    }
+
+    &.is-white &__logo {
+        color: var(--color-main-2);
+    }
+}
