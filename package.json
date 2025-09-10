@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tiptap/react": "^2.14.0",
+    "@vitejs/plugin-legacy": "^6.1.1",
     "classnames": "^2.5.1",
     "compose-function": "^3.0.3",
     "react": "^19.0.0",
@@ -34,6 +36,7 @@
     "postcss-mixins": "^11.0.3",
     "postcss-nested": "^7.0.2",
     "postcss-preset-env": "^10.1.5",
+    "terser": "^5.44.0",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0",
