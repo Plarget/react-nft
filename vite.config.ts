@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     react(),
     legacy({
-      targets: ["defaults", "chrome >= 60"],
+      targets: ["defaults"],
     }),
     createSvgIconsPlugin({
       iconDirs: [path.resolve(process.cwd(), "src/shared/assets/images/icons")],
