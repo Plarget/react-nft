@@ -8,11 +8,8 @@ export default defineConfig({
   plugins: [
     react(),
     legacy({
-      targets: ["Chrome >= 58", "Firefox >= 60", "Safari >= 12", "Edge >= 79"],
+      targets: [],
       modernPolyfills: true,
-      renderLegacyChunks: true,
-      additionalLegacyPolyfills: ["core-js/stable/object/has-own"],
-      additionalModernPolyfills: ["core-js/stable/object/has-own"],
     }),
     createSvgIconsPlugin({
       iconDirs: [path.resolve(process.cwd(), "src/shared/assets/images/icons")],
