@@ -8,8 +8,7 @@ export default defineConfig({
   plugins: [
     react(),
     legacy({
-      targets: [],
-      modernPolyfills: true,
+      targets: ["es2022"],
     }),
     createSvgIconsPlugin({
       iconDirs: [path.resolve(process.cwd(), "src/shared/assets/images/icons")],
