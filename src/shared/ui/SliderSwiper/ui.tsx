@@ -7,6 +7,7 @@ const SliderSwiper: FC<TSliderSwiper> = (props) => {
   const { children, slides, slideClassName, ...rest } = props;
 
   // @ts-ignore
+  console.log(Object.hasOwn({ a: 1 }, "a"));
   return (
     <Swiper {...rest}>
       {slides?.map(({ element, id }) => (
